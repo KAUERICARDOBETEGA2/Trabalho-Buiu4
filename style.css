@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --cor-fundo: #000000;
+    --cor-principal: #494949 ;
+    --cor-secundaria: #b9b9b9;
+    --cor-destaque: #ffffff;
+    --cor-texto: #000000;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Impede rolagem devido às pétalas */
+}
+
+.caixa-principal {
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Necessário para z-index funcionar */
+    z-index: 1; /* Coloca a caixa principal acima das pétalas */
+}
+
+h1, .caixa-perguntas, .caixa-resultado {
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+h1 {
+    color: var(--cor-destaque);
+}
+
+button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-principal);
+}
+
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* CSS para pétalas */
+@keyframes cair {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.petal {
+    position: absolute;
+    width: 60px; /* Largura ajustada */
+    height: 90px; /* Altura ajustada */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    border-radius: 50% 50% 0 0; /* Arredondamento para criar a forma de pétala */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); /* Forma da pétala */
+    opacity: 0.8;
+    pointer-events: none;
+    animation: cair linear;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.petal::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 90px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+    border-radius: 50% 50% 0 0;
+    transform: rotate(0deg);
+    top: 5px;
+    left: 5px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.patalas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0; /* Coloca as pétalas atrás do conteúdo principal */
+}
+
+.petal:nth-child(1) {
+    animation-duration: 10s;
+    animation-delay: 0s;
+    left: 10%;
+}
+
+.petal:nth-child(2) {
+    animation-duration: 12s;
+    animation-delay: 2s;
+    left: 30%;
+}
+
+.petal:nth-child(3) {
+    animation-duration: 15s;
+    animation-delay: 4s;
+    left: 50%;
+}
+
+.petal:nth-child(4) {
+    animation-duration: 18s;
+    animation-delay: 6s;
+    left: 70%;
+}
+
+.petal:nth-child(5) {
+    animation-duration: 20s;
+    animation-delay: 8s;
+    left: 90%;
+}
