@@ -5,14 +5,14 @@ export const perguntas = [
             {
                 texto: "A) Começar uma guerra de comida para animar o dia. Não é sempre que a gente se diverte né?",
                 afirmacao: [
-                    " Você pega o seu mingau de arroz e taca na criança a sua frente. Ela taca em outra criança e assim começa uma guerra de comida brutal. Rindo, você se esconde embaixo da mesa do refeitório e assiste ao caos que você criou. Quando você vai pegar mais comida para tacar, percebe que uma das irmãs pegou você pelo braço e te deixou em confinamento no seu quarto sem nem olhar no seu rosto, como se tivesse nojo."
+                    "Você lança seu mingau na criança à sua frente, iniciando uma caótica batalha de comida. Risadas e gritos ecoam pelo refeitório, até que uma irmã te agarra pelo braço e te arrasta de volta para o confinamento. Trancada novamente, ouve sussurros inquietantes vindos das paredes. Uma noite, a porta se abre misteriosamente, revelando uma passagem escura e uma escolha: enfrentar o desconhecido ou permanecer na cela."
                 ],
                 proxima: 1,
             },
             {
                 texto: "B) Desistir da ideia. Qualquer coisa que eu fizer vai acarretar mais problemas, e provavelmente vão me punir.",
                 afirmacao: [
-                    " Você termina de comer seu lanche e enquanto você olha em volta percebe o triste rosto das crianças o tédio nunca foi tão chato quanto hoje. Você sente que não consegue se segurar de fazer algo e solta um longo suspiro. Alguns minutos depois você volta ao seu quarto/cela."
+                    "Você decide permanecer em silêncio e termina sua refeição. De volta ao seu quarto, algo parece diferente. Uma das irmãs entra sem ser notada e entrega-lhe um bilhete: 'Você foi escolhida para uma missão secreta. Algo terrível está acontecendo aqui.' A revelação desperta um misto de medo e curiosidade em você."
                 ],
                 proxima: 2,
             },
@@ -24,17 +24,35 @@ export const perguntas = [
             {
                 texto: "A) Contar a verdade. Mesmo não sendo importante futuramente nem agora, é bom contar as coisas pros amigos, certo?",
                 afirmacao: [
-                    "Você pega novamente o bilhete e explica o porque da prova rosa. A prova rosa é uma prova para testar seus conhecimentos gerais em qualquer assunto como qualquer prova comum. Seu diferencial, é que se você tira uma nota acima de 80 eles te levam para a sala rosa e nunca mais vêem a criança. É de certo jeito até assustador. Você dorme com certo receio, mas confia em seu novo amigo.",
-    
+                    "Você responde rapidamente, explicando que a 'prova rosa' testa conhecimentos gerais, mas se alguém tira acima de 80 é levado para a 'sala rosa'... e nunca mais é visto. No dia seguinte, Kyoko não responde. Ao invés disso, ouve passos e uma risada abafada atrás da parede. Uma irmã aparece com o bilhete que você escreveu. ‘Kyoko se foi,’ ela sussurra, com um sorriso frio. ‘Talvez você seja a próxima.’"
                 ],
                 proxima: 3,
             },
             {
                 texto: "B) Se manter em silêncio. Não é importante de nenhum jeito, e se alguma irmã descobrir que eu sei, eu vou estar em grandes problemas.",
                 afirmacao: [
-                    "Você dorme tranquilamente."
+                    "Você decide não responder. Dorme tranquilamente, mas os sonhos vêm - visões de Kyoko em um lugar escuro, chamando por você. Acorda decidida a investigar o que realmente acontece na 'sala rosa' e descobre um segredo aterrador no porão."
                 ],
                 proxima: 4,
+            },
+        ]
+    },
+    {
+        enunciado: "Você está novamente confinada em seu quarto/cela. As paredes parecem mais próximas agora, e os sussurros mais altos. O papel com a letra elegante de Kyoko aparece novamente, deslizando pelo vão. ‘Não confie nas irmãs,’ ele diz. E uma nova escolha se apresenta.",
+        alternativas: [
+            {
+                texto: "A) Seguir as instruções de Kyoko e tentar fugir.",
+                afirmacao: [
+                    "Você decide confiar em Kyoko. Encontra uma chave escondida na sua cama e escapa pela passagem secreta, enfrentando os perigos do caminho. Você não sabe o que te espera lá fora, mas a liberdade é irresistível."
+                ],
+                proxima: 5,
+            },
+            {
+                texto: "B) Ignorar o bilhete e continuar obedecendo as irmãs.",
+                afirmacao: [
+                    "Você ignora o aviso e permanece obediente. As irmãs te observam mais de perto. Uma noite, é levada para uma sala escura, onde uma voz sussurra: ‘Você deveria ter fugido quando teve a chance.’"
+                ],
+                proxima: 6,
             },
         ]
     },
